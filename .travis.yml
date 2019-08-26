@@ -27,7 +27,7 @@ env:
     - TEST_SUITE=unit
     - TEST_SUITE=integration
     - TEST_SUITE=api
-#    - TEST_SUITE=functional
+    - TEST_SUITE=functional
 matrix:
   fast_finish: true
 cache:
@@ -63,4 +63,4 @@ script:
   - if [ $TEST_SUITE == 'unit' ]; then phpunit --configuration dev/tests/unit/phpunit.xml; fi
   - if [ $TEST_SUITE == 'integration' ]; then phpunit -c dev/tests/integration; fi
   - if [ $TEST_SUITE == 'api' ]; then phpunit -c dev/tests/api-functional; fi
-#  - if [ $TEST_SUITE == 'functional' ]; then mftf run:group AdobeStockIntegration; fi
+  - if [ $TEST_SUITE == 'functional' ]; then codecept run functional --verbose --steps -g AdobeStockIntegration -c dev/tests/acceptance/codeception.yml; fi

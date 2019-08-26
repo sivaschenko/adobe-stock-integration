@@ -45,6 +45,7 @@ if [[ $TEST_SUITE = "functional" ]]; then
         cd ../../..
 
         mftf build:project
+        mftf generate:tests
 fi
 
 if [[ $TEST_SUITE = "api" ]]; then
