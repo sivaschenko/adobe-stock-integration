@@ -45,7 +45,7 @@ if [[ $TEST_SUITE = "functional" ]]; then
         cd ../../..
 
         mftf build:project --MAGENTO_BASE_URL='http://${MAGENTO_HOST_NAME}/'
-        mftf generate:test --tests='{"tests":null,"suites":{"AdobeStockIntegration":[]}}'
+        mftf generate:test --tests='{"tests":null,"suites":{"AdobeStockIntegrationSuite":[]}}'
 fi
 
 if [[ $TEST_SUITE = "api" ]]; then
