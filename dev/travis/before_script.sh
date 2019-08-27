@@ -42,10 +42,10 @@ if [[ $TEST_SUITE = "functional" ]]; then
         sed -e "s?%ADOBE_STOCK_API_KEY%?${ADOBE_STOCK_API_KEY}?g" --in-place ./.env
         sed -e "s?%ADOBE_STOCK_PRIVATE_KEY%?${ADOBE_STOCK_PRIVATE_KEY}?g" --in-place ./.env
 
-        cd ../../..
-
         mftf build:project --MAGENTO_BASE_URL='http://${MAGENTO_HOST_NAME}/'
         mftf generate:test --tests='{"tests":null,"suites":{"AdobeStockIntegrationSuite":[]}}'
+
+        cd ../../..
 fi
 
 if [[ $TEST_SUITE = "api" ]]; then
