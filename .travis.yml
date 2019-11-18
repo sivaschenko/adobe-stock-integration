@@ -16,4 +16,4 @@ before_install:
   - mkdir -p ext/magento/adobe-stock-integration
   - mv !(ext) ext/magento/adobe-stock-integration/
 script:
-  - if [ $TEST_SUITE == 'static' ]; then ! find ../ext -type f -name "*.php" -exec grep -L strict_types=1 {} + | grep ext/magento/adobe-stock-integration/; fi
+  - if [ $TEST_SUITE == 'static' ]; then ! find ./ext -type f -name "*.php" -exec grep -L strict_types=1 {} + | grep ext/magento/adobe-stock-integration/; fi
