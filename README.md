@@ -2,7 +2,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/magento/adobe-stock-integration/badge.svg?branch=develop)](https://coveralls.io/github/magento/adobe-stock-integration?branch=develop)
 
-Welcome to the Adobe Stock Integration community project!
+Welcome to the Adobe Stock Integration community project
 
 ## Overview
 
